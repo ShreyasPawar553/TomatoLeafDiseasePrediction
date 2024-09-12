@@ -7,7 +7,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 
 # Use raw string for file paths
-filepath = r'D:\SIH\proto 2\Plant-Leaf-Disease-Prediction\model.h5'
+filepath = 'model.h5'
 model = load_model(filepath)
 print("Model Loaded Successfully")
 
@@ -56,7 +56,7 @@ def predict():
         filename = file.filename        
         print("@@ Input posted = ", filename)
 
-        file_path = os.path.join(r'D:\SIH\proto 2\Plant-Leaf-Disease-Prediction\static\upload', filename)
+        file_path = os.path.join('static\upload', filename)
         file.save(file_path)
 
         print("@@ Predicting class......")
